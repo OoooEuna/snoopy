@@ -1,0 +1,83 @@
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+.container {
+    width: 720px;
+    height: 900px;
+    margin: 0 auto;
+    border: 3px dashed lightsteelblue;
+}
+
+ul {list-style-type: none;}
+a {text-decoration: none; color: black;}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+header nav {
+    height: 60px;
+}
+
+header nav .mainmenu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    /* background-color: gray; */
+}
+
+/* 메인 메뉴 */
+header nav .mainmenu > li {
+    width: 200px;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid lightsteelblue;
+}
+/* 메뉴를 감싸고 있는 박스 전체 영역 아무데나 커서를 올려도 hover가 되게 */
+header nav .mainmenu > li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 메인 메뉴에 마우스 올리면 메인 메뉴 박스 색상 바뀌게 */
+header nav .mainmenu > li:hover {
+    background-color: cornflowerblue;
+}
+
+/* 메인 메뉴에 마우스를 올리면 (메인메뉴도 a 태그, 서브메뉴들도 a태그) 이므로 모두 하얀색 글씨
+header nav .mainmenu > li:hover a {
+    color: snow;
+} */
+
+/* 그래서 메인 메뉴 글씨 색만 화이트로 되게 만듦! */
+header nav .mainmenu > li:hover > a {
+    color: snow;
+}
+
+
+/* 메인 메뉴에 마우스 호버 시, 서브 메뉴 출력 */
+header nav .mainmenu > li:hover .submenu {
+    display: inherit;
+}
+
+
+/* 서브 메뉴 */
+header nav .submenu {
+    display: none;  /* 서브 메뉴 감춤 : (마우스를 올리기 전까진 서브메뉴 출력 x ) */
+}
+
+header nav .submenu li {
+    background-color: #ddd;
+}
+
+header nav .submenu li:hover {
+    background-color: royalblue;
+}
+
+header nav .submenu li:hover a {
+    color: snow;
+}
